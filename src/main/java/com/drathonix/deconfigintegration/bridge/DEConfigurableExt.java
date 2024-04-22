@@ -7,7 +7,7 @@ import net.minecraft.nbt.NBTTagCompound;
 
 public interface DEConfigurableExt {
 
-    default @Nonnull NBTTagCompound hodgepodge$getConfigurableTag(@Nonnull ItemStack stack) {
+    default @Nonnull NBTTagCompound deci$getConfigurableTag(@Nonnull ItemStack stack) {
         return stack.stackTagCompound;
     }
 }
