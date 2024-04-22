@@ -50,7 +50,7 @@ public class MixinIC2QuantumDEIntegration implements DEConfigurableExt, IConfigu
             }
             case 2 -> {
                 fields
-                    .add(new ItemConfigField(References.BOOLEAN_ID, slot, "quantumSprint").readFromItem(stack, false));
+                    .add(new ItemConfigField(References.BOOLEAN_ID, slot, "quantumSprint").readFromItem(stack, true));
                 return fields;
             }
             default -> {
