@@ -20,6 +20,7 @@ public class MixinGraviAdvancedLappackDEIntegration implements DEConfigurableExt
 
     @Override
     public List<ItemConfigField> getFields(ItemStack stack, int slot) {
+
         List<ItemConfigField> fields = new ArrayList<>();
         fields.add(
             new AdvancedItemConfigField(References.INT_ID, slot, "toolMode", "gravisuite.Charging")

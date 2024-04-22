@@ -6,9 +6,11 @@ IC2: Night Vision Goggles, Nano Helm, Quantum Helm, Quantum Chest, Quantum Leggi
 
 Gravi Suite: GraviChest Plate, Advanced Chainsaw, Advanced Drill, Vajra, and Battery packs.
 
+Gravi Suite Neo: Chainsaw Treecapitator is supported.
+
 ### Future Targets
 EMT and Thaumic boots: Will implement speed and jump modulation and magic vision toggles.
-GraviSuiteNeo: Will implement support for all GSN changes.
+Gravi Suite Neo: Will implement support for all GSN changes.
 
 ### Other changes
 IC2: Added an NBT tag to Quantum Leggings to toggle quantum sprint without changing the config. Can only be edited in the drac gui.

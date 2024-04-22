@@ -27,4 +27,8 @@ gravisuite.bigHolePower=3x3 Mode
 button.de.gravisuite.Charging.name=Charging
 button.de.gravisuite.Shear.name=Shear Mode
 
+button.de.gravisuiteneo.chainSaw=Mode
+gravisuite.axe=Axe
+gravisuite.shears=Shears
+gravisuite.treecapitator=Treecapitator
 
