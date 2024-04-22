@@ -13,6 +13,7 @@ DECI contains only two classes of its own that you need to be aware of:
 * Supports adding fields that draconic evolution cannot handle normally.
 * Can support representing a datatype as another.
 * For good examples of this, see the [GraviSuite Mixins](https://github.com/Drathonix/DEConfig-Integration/tree/main/src/main/java/com/drathonix/deconfigintegration/mixins/gravisuite)
+  
 [DEConfigurableExt](https://github.com/Drathonix/DEConfig-Integration/blob/main/src/main/java/com/drathonix/deconfigintegration/bridge/DEConfigurableExt.java)
 * Exposes an item to Draconic Evolution's config system.
 * By default, returns the itemstack's entire NBT tag. This is safe, but some mods may have sub NBT compounds specifically for item settings.
