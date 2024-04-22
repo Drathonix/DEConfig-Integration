@@ -1,0 +1,30 @@
+button.de.Nightvision.name=Nightvision
+button.de.HudMode.name=Hud Mode
+ic2.off=Off
+ic2.on=On
+button.de.ic2.laserSetting.name=Laser Mode
+ic2.extended=Extended
+ic2.mode.mining=Mining
+ic2.mode.lowFocus=Low-Focus
+ic2.mode.longRange=Long-Range
+ic2.mode.horizontal=Horizontal
+ic2.mode.superHeat=Super-Heat
+ic2.mode.scatter=Scatter
+ic2.mode.explosive=Explosive
+button.de.jetpack.name=Jetpack Engine
+button.de.hoverMode.name=Hover Mode
+button.de.quantumSprint.name=Quantum Sprint
+button.de.active.name=Active
+button.de.isFlyActive.name=Jetpack Engine
+button.de.isHoverActive.name=Hover Mode
+button.de.isLevitationActive.name=Leviation
+button.de.gravisuite.PrecisionMode.name=Precision Mode
+button.de.gravisuite.Drill.name=Drill Speed
+gravisuite.normalPower=Normal Speed
+gravisuite.lowPower=Low Speed
+gravisuite.ultraLowPower=Precision Speed
+gravisuite.bigHolePower=3x3 Mode
+button.de.gravisuite.Charging.name=Charging
+button.de.gravisuite.Shear.name=Shear Mode
+
+

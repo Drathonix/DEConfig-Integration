@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package com.drathonix.deconfigintegration.proxy;
 
 public class ClientProxy extends CommonProxy {
 

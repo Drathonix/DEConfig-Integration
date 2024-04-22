@@ -19,4 +19,4 @@ For the reference checkout the [example mixin configuration branch](https://gith
 
 1. Extract mixins package and plugin configuration from `mixins.yourModId.json` to `gradle.properties`
 2. Implement MixinPlugin according to example from the reference
-3. Remove mixins.mymodid.json
+3. Remove mixins.deconfigintegration.json
