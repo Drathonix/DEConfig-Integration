@@ -24,10 +24,16 @@ public class MixinGraviAdvChainsawDEIntegration implements DEConfigurableExt, IC
         List<ItemConfigField> fields = new ArrayList<>();
         // So funny thing, Gravisuite has the boolean logic reversed. So I had to use the enum system.
         fields.add(
-            new AdvancedItemConfigField(References.INT_ID, slot, "toolMode", DEConfigIntegration.gravisuiteneo ? "gravisuiteneo.chainSaw" : "gravisuite.Shear").representAsEnum(
-                DEConfigIntegration.gravisuiteneo ? new String[] { "gravisuite.axe", "gravisuite.shears", "gravisuite.treecapitator" }
-                    : new String[] { "ic2.on", "ic2.off" })
-                .readFromItem(stack, 0));
+            new AdvancedItemConfigField(
+                References.INT_ID,
+                slot,
+                "toolMode",
+                DEConfigIntegration.gravisuiteneo ? "gravisuiteneo.chainSaw" : "gravisuite.Shear")
+                    .representAsEnum(
+                        DEConfigIntegration.gravisuiteneo
+                            ? new String[] { "gravisuite.axe", "gravisuite.shears", "gravisuite.treecapitator" }
+                            : new String[] { "ic2.on", "ic2.off" })
+                    .readFromItem(stack, 0));
         return fields;
     }
 
