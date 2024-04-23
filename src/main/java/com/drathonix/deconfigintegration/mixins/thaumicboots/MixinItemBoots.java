@@ -12,6 +12,7 @@ import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
 import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
 import com.drathonix.deconfigintegration.bridge.AdvancedItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
+import com.drathonix.deconfigintegration.bridge.TranslatableItemConfigField;
 
 import thaumicboots.api.ItemBoots;
 
@@ -21,7 +22,9 @@ public class MixinItemBoots implements DEConfigurableExt, IConfigurableItem {
     @Override
     public List<ItemConfigField> getFields(ItemStack stack, int slot) {
         List<ItemConfigField> fields = new ArrayList<>();
-        fields.add(new ItemConfigField(References.BOOLEAN_ID, slot, ItemBoots.TAG_MOD_OMNI).readFromItem(stack, true));
+        fields.add(
+            new TranslatableItemConfigField(References.BOOLEAN_ID, slot, "omni", "boots.omni")
+                .readFromItem(stack, true));
         fields.add(
             new AdvancedItemConfigField(References.DOUBLE_ID, slot, "speed", "boots.speedPercentage")
                 .setMinMaxAndIncromente(0D, 1D, 0.05D)
