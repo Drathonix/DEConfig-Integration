@@ -33,19 +33,28 @@ public class DECIMixins implements ILateMixinLoader {
                 }
 
                 if (loadedMods.contains("IC2")) {
-                    mixins.add("ic2.MixinIC2JetpackDEIntegration");
-                    mixins.add("ic2.MixinIC2MiningLaserDEIntegration");
-                    mixins.add("ic2.MixinIC2NanoSuitDEIntegration");
-                    mixins.add("ic2.MixinIC2NightVisionGogglesDEIntegration");
-                    mixins.add("ic2.MixinIC2QuantumDEIntegration");
+                    mixins.add("ic2.MixinItemArmorJetpack");
+                    mixins.add("ic2.MixinItemToolMiningLaser");
+                    mixins.add("ic2.MixinItemArmorNanoSuit");
+                    mixins.add("ic2.MixinItemArmorNightvisionGoggles");
+                    mixins.add("ic2.MixinItemArmorQuantumSuit");
                 }
                 if (loadedMods.contains("GraviSuite")) {
-                    mixins.add("gravisuite.MixinGraviAdvancedJetPackDEIntegration");
-                    mixins.add("gravisuite.MixinGraviAdvancedLappackDEIntegration");
-                    mixins.add("gravisuite.MixinGraviAdvChainsawDEIntegration");
-                    mixins.add("gravisuite.MixinGraviAdvDrillDEIntegration");
-                    mixins.add("gravisuite.MixinGraviChestPlateDEIntegration");
-                    mixins.add("gravisuite.MixinGraviVajraDEIntegration");
+                    mixins.add("gravisuite.MixinItemAdvancedJetpack");
+                    mixins.add("gravisuite.MixinItemAdvancedLappack");
+                    mixins.add("gravisuite.MixinItemAdvChainsaw");
+                    mixins.add("gravisuite.MixinItemAdvDDrill");
+                    mixins.add("gravisuite.MixinItemGraviChestPlate");
+                    mixins.add("gravisuite.MixinItemVajra");
+                }
+                if (loadedMods.contains("thaumicboots")) {
+                    mixins.add("thaumicboots.MixinItemBoots");
+                }
+                if (loadedMods.contains("EMT")) {
+                    mixins.add("emt.MixinItemElectricBoots");
+                    mixins.add("emt.MixinItemElectricGoggles");
+                    mixins.add("emt.MixinItemNanoGoggles");
+                    mixins.add("emt.MixinItemQuantumGoggles");
                 }
             } else {
                 DEConfigIntegration.LOG.log(Level.WARN, "Draconic evolution is not present. DECI has been disabled.");

@@ -5,11 +5,13 @@ import java.util.List;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -28,11 +30,11 @@ import ic2.core.item.armor.ItemArmorQuantumSuit;
 import ic2.core.util.ConfigUtil;
 
 @Mixin(ItemArmorQuantumSuit.class)
-public class MixinIC2QuantumDEIntegration implements DEConfigurableExt, IConfigurableItem {
+public class MixinItemArmorQuantumSuit implements DEConfigurableExt, IConfigurableItem {
 
     @Override
     public List<ItemConfigField> getFields(ItemStack stack, int slot) {
-        int armorType = ((ItemArmorQuantumSuit) stack.getItem()).armorType;
+        int armorType = deci$asItemArmor().armorType;
         List<ItemConfigField> fields = new ArrayList<>();
         switch (armorType) {
             case 0 -> {
@@ -56,6 +58,11 @@ public class MixinIC2QuantumDEIntegration implements DEConfigurableExt, IConfigu
                 return fields;
             }
         }
+    }
+
+    @Unique
+    public ItemArmor deci$asItemArmor() {
+        return ItemArmor.class.cast(this);
     }
 
     // Allow disabling Quantum Sprint through Draconic evolution GUI.

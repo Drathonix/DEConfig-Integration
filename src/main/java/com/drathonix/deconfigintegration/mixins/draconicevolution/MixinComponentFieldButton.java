@@ -34,7 +34,7 @@ public class MixinComponentFieldButton {
         cancellable = true)
     public void hodgepodge$supportAdvancedFields(int x, int y, int button, CallbackInfo ci) {
         if (field instanceof AdvancedItemConfigField aicf) {
-            if (aicf.representativeType == References.BOOLEAN_ID) {
+            if (aicf.representativeType == References.BOOLEAN_ID && aicf.datatype != References.BOOLEAN_ID) {
                 aicf.value = !aicf.castToBoolean();
                 aicf.value = aicf.castBooleanToInt();
                 aicf.sendChanges();

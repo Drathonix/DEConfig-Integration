@@ -12,17 +12,16 @@ import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
 import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
 
-import gravisuite.ItemAdvancedJetPack;
+import gravisuite.ItemGraviChestPlate;
 
-// Advanced Nanosuit extends this, so it is also applied there.
-@Mixin(ItemAdvancedJetPack.class)
-public class MixinGraviAdvancedJetPackDEIntegration implements DEConfigurableExt, IConfigurableItem {
+@Mixin(ItemGraviChestPlate.class)
+public class MixinItemGraviChestPlate implements DEConfigurableExt, IConfigurableItem {
 
     @Override
     public List<ItemConfigField> getFields(ItemStack stack, int slot) {
         List<ItemConfigField> fields = new ArrayList<>();
         fields.add(new ItemConfigField(References.BOOLEAN_ID, slot, "isFlyActive").readFromItem(stack, false));
-        fields.add(new ItemConfigField(References.BOOLEAN_ID, slot, "isHoverActive").readFromItem(stack, false));
+        fields.add(new ItemConfigField(References.BOOLEAN_ID, slot, "isLevitationActive").readFromItem(stack, false));
         return fields;
     }
 

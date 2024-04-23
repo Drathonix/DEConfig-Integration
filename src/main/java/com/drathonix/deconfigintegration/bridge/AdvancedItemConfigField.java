@@ -4,27 +4,19 @@ import net.minecraft.util.StatCollector;
 import net.minecraft.util.StringUtils;
 
 import com.brandon3055.draconicevolution.common.lib.References;
-import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
 
-public class AdvancedItemConfigField extends ItemConfigField {
+public class AdvancedItemConfigField extends TranslatableItemConfigField {
 
     public static final int ENUM_REPR_ID = -1;
 
-    private final String translationKey;
     // Represents how the field should be rendered in GUI. Some mods use integers instead of booleans for boolean
     // data, this allows using boolean representation for those cases.
     public int representativeType;
     private String[] enumTranslationKeys;
 
     public AdvancedItemConfigField(int datatype, int slot, String nbtName, String translationKey) {
-        super(datatype, slot, nbtName);
-        this.translationKey = translationKey;
+        super(datatype, slot, nbtName, translationKey);
         this.representativeType = datatype;
-    }
-
-    @Override
-    public String getLocalizedName() {
-        return StatCollector.translateToLocal("button.de." + translationKey + ".name");
     }
 
     public AdvancedItemConfigField representAs(int representativeType) {

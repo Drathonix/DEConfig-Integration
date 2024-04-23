@@ -1,4 +1,4 @@
-package com.drathonix.deconfigintegration.mixins.ic2;
+package com.drathonix.deconfigintegration.mixins.gravisuite;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,20 +13,20 @@ import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
 import com.drathonix.deconfigintegration.bridge.AdvancedItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
 
-import ic2.core.item.tool.ItemToolMiningLaser;
+import gravisuite.ItemAdvancedLappack;
 
-@Mixin(ItemToolMiningLaser.class)
-public class MixinIC2MiningLaserDEIntegration implements DEConfigurableExt, IConfigurableItem {
+@Mixin(ItemAdvancedLappack.class)
+public class MixinItemAdvancedLappack implements DEConfigurableExt, IConfigurableItem {
 
     @Override
     public List<ItemConfigField> getFields(ItemStack stack, int slot) {
+
         List<ItemConfigField> fields = new ArrayList<>();
         fields.add(
-            new AdvancedItemConfigField(References.INT_ID, slot, "laserSetting", "ic2.laserSetting")
-                .representAsEnum(
-                    new String[] { "ic2.mode.mining", "ic2.mode.lowFocus", "ic2.mode.longRange", "ic2.mode.horizontal",
-                        "ic2.mode.superHeat", "ic2.mode.scatter" })
-                .readFromItem(stack, false));
+            new AdvancedItemConfigField(References.INT_ID, slot, "toolMode", "gravisuite.Charging")
+                .representAs(References.BOOLEAN_ID)
+                .readFromItem(stack, 1)
+                .setMinMaxAndIncromente(0, 1, 1));
         return fields;
     }
 

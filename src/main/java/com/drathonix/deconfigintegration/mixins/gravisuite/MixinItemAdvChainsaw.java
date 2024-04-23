@@ -17,7 +17,7 @@ import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
 import gravisuite.ItemAdvChainsaw;
 
 @Mixin(ItemAdvChainsaw.class)
-public class MixinGraviAdvChainsawDEIntegration implements DEConfigurableExt, IConfigurableItem {
+public class MixinItemAdvChainsaw implements DEConfigurableExt, IConfigurableItem {
 
     @Override
     public List<ItemConfigField> getFields(ItemStack stack, int slot) {

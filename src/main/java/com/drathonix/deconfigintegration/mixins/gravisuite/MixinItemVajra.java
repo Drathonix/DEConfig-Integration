@@ -13,20 +13,19 @@ import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
 import com.drathonix.deconfigintegration.bridge.AdvancedItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
 
-import gravisuite.ItemAdvDDrill;
+import gravisuite.ItemVajra;
 
-@Mixin(ItemAdvDDrill.class)
-public class MixinGraviAdvDrillDEIntegration implements DEConfigurableExt, IConfigurableItem {
+@Mixin(ItemVajra.class)
+public class MixinItemVajra implements DEConfigurableExt, IConfigurableItem {
 
     @Override
     public List<ItemConfigField> getFields(ItemStack stack, int slot) {
         List<ItemConfigField> fields = new ArrayList<>();
         fields.add(
-            new AdvancedItemConfigField(References.INT_ID, slot, "toolMode", "gravisuite.Drill")
-                .representAsEnum(
-                    new String[] { "gravisuite.normalPower", "gravisuite.lowPower", "gravisuite.ultraLowPower",
-                        "gravisuite.bigHolePower" })
-                .readFromItem(stack, 0));
+            new AdvancedItemConfigField(References.INT_ID, slot, "toolMode", "gravisuite.PrecisionMode")
+                .representAs(References.BOOLEAN_ID)
+                .readFromItem(stack, 0)
+                .setMinMaxAndIncromente(0, 1, 1));
         return fields;
     }
 
