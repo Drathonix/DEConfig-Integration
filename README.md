@@ -1,6 +1,8 @@
 ### Draconic Evolution Config GUI Integration v1.0.0
 Keybinds suck. So let's unify everything to use one keybind: The draconic evolution tool and armor config GUI key! This mod was designed specifically for GTNH.
 
+[Demonstration Video](https://www.youtube.com/watch?v=3MJpmwVm7-U)
+
 ### Current Supported Mods and Items
 IC2: Night Vision Goggles, Jetpack, Electric Jetpack, Nano Helm, Quantum Helm, Quantum Chest, Quantum Leggings, and Mining Laser.
 
