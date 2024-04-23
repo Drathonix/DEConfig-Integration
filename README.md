@@ -1,4 +1,4 @@
-### Draconic Evolution Config GUI Integration
+### Draconic Evolution Config GUI Integration v1.0.0
 Keybinds suck. So let's unify everything to use one keybind: The draconic evolution tool and armor config GUI key! This mod was designed specifically for GTNH.
 
 ### Current Supported Mods and Items
