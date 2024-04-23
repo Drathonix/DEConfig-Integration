@@ -24,7 +24,7 @@ public class MixinProfileHelper {
             ordinal = 0,
             shift = At.Shift.BEFORE),
         cancellable = true)
-    private static void interceptForCustomItems(ItemStack stack, CallbackInfoReturnable<NBTTagCompound> cir) {
+    private static void deci$interceptForCustomItems(ItemStack stack, CallbackInfoReturnable<NBTTagCompound> cir) {
         if (stack.getItem() instanceof DEConfigurableExt customConfigurableItem) {
             cir.setReturnValue(customConfigurableItem.deci$getConfigurableTag(stack));
         }

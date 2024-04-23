@@ -32,7 +32,7 @@ public class MixinComponentFieldButton {
             target = "Lnet/minecraft/client/audio/SoundHandler;playSound(Lnet/minecraft/client/audio/ISound;)V",
             shift = At.Shift.AFTER),
         cancellable = true)
-    public void hodgepodge$supportAdvancedFields(int x, int y, int button, CallbackInfo ci) {
+    public void deci$supportAdvancedFields(int x, int y, int button, CallbackInfo ci) {
         if (field instanceof AdvancedItemConfigField aicf) {
             if (aicf.representativeType == References.BOOLEAN_ID && aicf.datatype != References.BOOLEAN_ID) {
                 aicf.value = !aicf.castToBoolean();
