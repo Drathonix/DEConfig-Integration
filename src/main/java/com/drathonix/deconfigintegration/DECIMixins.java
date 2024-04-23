@@ -51,7 +51,7 @@ public class DECIMixins implements ILateMixinLoader {
                     mixins.add("thaumicboots.MixinItemBoots");
                 }
                 if (loadedMods.contains("EMT")) {
-                    mixins.add("emt.MixinItemElectricBoots");
+                    mixins.add("emt.MixinItemElectricBootsTraveller");
                     mixins.add("emt.MixinItemElectricGoggles");
                     mixins.add("emt.MixinItemNanoGoggles");
                     mixins.add("emt.MixinItemQuantumGoggles");
