@@ -12,12 +12,9 @@ Thaumic Boots: All boots speed, jump, and omni modulation values are supported.
 
 EMT: All boots speed and jump boost configurable.
 
-### Future Targets
-EMT and Thaumic boots: Will implement speed and jump modulation and magic vision toggles.
-
 ### Other changes
 IC2: Added an NBT tag to Quantum Leggings to toggle quantum sprint without changing the config. Can only be edited in the drac gui.
-
+EMT: Added an NBT tag to Electric Goggles to disable Magic Vision
 ### How to integrate with DECI
 DECI contains only two classes of its own that you need to be aware of:
 
