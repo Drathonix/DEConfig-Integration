@@ -3,7 +3,6 @@ package com.drathonix.deconfigintegration.mixins.emt;
 import java.util.ArrayList;
 import java.util.List;
 
-import emt.item.armor.boots.ItemElectricBootsTraveller;
 import net.minecraft.item.ItemStack;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,7 +13,7 @@ import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
 import com.drathonix.deconfigintegration.bridge.AdvancedItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
 
-import thaumicboots.api.ItemElectricBoots;
+import emt.item.armor.boots.ItemElectricBootsTraveller;
 
 @Mixin(ItemElectricBootsTraveller.class)
 public class MixinItemElectricBootsTraveller implements DEConfigurableExt, IConfigurableItem {
