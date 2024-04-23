@@ -6,7 +6,7 @@
 		"description": "Gives many, many items the ability to be configured through the Draconic Evolution Configuration GUI.",
 		"version": "${modVersion}",
 		"mcversion": "${minecraftVersion}",
-		"url": "https://github.com/SinTh0r4s/MyMod",
+		"url": "https://github.com/Drathonix/DEConfig-Integration",
 		"updateUrl": "",
 		"authorList": ["Drathonix"],
 		"credits": "",
