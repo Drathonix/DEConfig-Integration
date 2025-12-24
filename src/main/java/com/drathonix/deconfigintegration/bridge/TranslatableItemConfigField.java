@@ -28,7 +28,7 @@ public class TranslatableItemConfigField extends ItemConfigField {
 
     @Override
     public String getLocalizedName() {
-        return StatCollector.translateToLocal(useKeyDirectly ? translationKey : "button.de." + translationKey + ".name");
+        return StatCollector
+            .translateToLocal(useKeyDirectly ? translationKey : "button.de." + translationKey + ".name");
     }
 }
-/
