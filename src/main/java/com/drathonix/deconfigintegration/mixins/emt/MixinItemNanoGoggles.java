@@ -14,7 +14,7 @@ import emt.item.armor.goggles.ItemNanoGoggles;
 
 /**
  * Allows toggling night vision and node vision.
- * 
+ *
  * @author Jack Andersen
  * @since 1.0.2
  */

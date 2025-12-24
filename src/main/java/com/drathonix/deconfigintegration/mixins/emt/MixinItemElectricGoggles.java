@@ -21,7 +21,7 @@ import emt.item.armor.goggles.ItemElectricGoggles;
 /**
  * Adds the ability to disable the goggles of revealing aura node display effect on the electric, nano, and quantum
  * helmets of revealing.
- * 
+ *
  * @author Jack Andersen
  * @since 1.0.2
  */

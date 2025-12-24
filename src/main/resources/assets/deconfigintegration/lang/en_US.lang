@@ -37,3 +37,7 @@ button.de.boots.jumpPercentage.name=Jump Bonus Power
 button.de.boots.omni.name=Omnidirectional Speed
 
 button.de.flight.name=Creative Flight
+button.de.VerticalFlightSpeedMulti.name=Flight Vertical Speed Multiplier
+button.de.StepHeight.name=Step Height
+button.de.FlightSpeedBoost.name=Flight Horizontal Speed Boost
+button.de.HorizontalSpeedBoost.name=Horizontal Speed Boost

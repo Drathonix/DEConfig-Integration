@@ -14,7 +14,7 @@ import emt.item.armor.goggles.ItemQuantumGoggles;
 
 /**
  * Necessary due to a small difference with how the nano goggles store nightvision toggling.
- * 
+ *
  * @author Jack Andersen
  * @since 1.0.2
  */

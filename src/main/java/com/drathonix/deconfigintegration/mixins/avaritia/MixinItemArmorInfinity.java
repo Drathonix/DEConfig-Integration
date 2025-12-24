@@ -49,6 +49,19 @@ public class MixinItemArmorInfinity implements DEConfigurableExt, IConfigurableI
             }
             // Boots
             default -> {
+                fields.add(
+                    new ItemConfigField(References.DOUBLE_ID, slot, "VerticalFlightSpeedMulti")
+                        .readFromItem(stack, 0.5D)
+                        .setMinMaxAndIncromente(1D, 1.5D, 0.01D));
+                fields.add(
+                    new ItemConfigField(References.DOUBLE_ID, slot, "StepHeight").readFromItem(stack, 1D)
+                        .setMinMaxAndIncromente(0.501D, 1.01D, 0.1D));
+                fields.add(
+                    new ItemConfigField(References.DOUBLE_ID, slot, "FlightSpeedBoost").readFromItem(stack, 1.1D)
+                        .setMinMaxAndIncromente(1D, 1.1D, 0.01D));
+                fields.add(
+                    new ItemConfigField(References.DOUBLE_ID, slot, "HorizontalSpeedBoost").readFromItem(stack, 0.15D)
+                        .setMinMaxAndIncromente(0D, 0.15D, 0.01D));
                 return fields;
             }
         }

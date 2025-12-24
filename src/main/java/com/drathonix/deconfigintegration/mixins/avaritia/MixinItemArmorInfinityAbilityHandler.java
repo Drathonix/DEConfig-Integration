@@ -13,6 +13,7 @@ import org.spongepowered.asm.lib.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
@@ -24,6 +25,13 @@ import fox.spiteful.avaritia.items.ItemArmorInfinity;
 @Mixin(value = ItemArmorInfinity.abilityHandler.class)
 public class MixinItemArmorInfinityAbilityHandler {
 
+    /**
+     * Allows toggling creative flight.
+     *
+     * @param instance the player capabilities.
+     * @param value    the original value.
+     * @param player   the target player.
+     */
     @Redirect(
         method = "updatePlayerAbilityStatus",
         at = @At(
@@ -41,6 +49,72 @@ public class MixinItemArmorInfinityAbilityHandler {
         } else {
             instance.allowFlying = value;
         }
+    }
+
+    /**
+     * Allows modifying the infinity sanic speed boost for flight horizontal and global horizontal speed.
+     *
+     * @param in       the original speed value (unchanged with default settings)
+     * @param flying   the player's flying state.
+     * @param sneaking the player's sneaking state.
+     * @param player   the target player.
+     * @return the new speed boost value.
+     */
+    @ModifyVariable(
+        method = "updatePlayerAbilityStatus",
+        require = 1,
+        at = @At(
+            value = "FIELD",
+            ordinal = 0,
+            target = "Lnet/minecraft/entity/player/EntityPlayer;moveForward:F",
+            shift = At.Shift.BEFORE,
+            opcode = Opcodes.GETFIELD))
+    protected float modifySpeedMulti(float in, @Local(ordinal = 4) boolean flying, @Local(ordinal = 6) boolean sneaking,
+        @Local EntityPlayer player) {
+        ItemStack boots = player.getCurrentArmor(0);
+        return (float) (ItemConfigFields.getOrDefault(boots, "HorizontalSpeedBoost", 0.15D)
+            * (flying ? ItemConfigFields.getOrDefault(boots, "FlightSpeedBoost", 1.1D) : 1.0D)
+            * (sneaking ? 0.1f : 1.0f));
+    }
+
+    /**
+     * Allows modifying the vertical flight speed multiplier.
+     *
+     * @param instance the target player.
+     * @param value    the original value (discarded)
+     */
+    @Redirect(
+        method = "updatePlayerAbilityStatus",
+        require = 1,
+        at = @At(
+            value = "FIELD",
+            target = "Lnet/minecraft/entity/player/EntityPlayer;motionY:D",
+            opcode = Opcodes.PUTFIELD))
+    protected void modifyFlightVerticalSpeed(EntityPlayer instance, double value) {
+        ItemStack boots = instance.getCurrentArmor(0);
+        instance.motionY *= ItemConfigFields.getOrDefault(boots, "VerticalFlightSpeedMulti", 1.5D);
+    }
+
+    /**
+     * Allows modifying the infinity armor step height.
+     *
+     * @param instance the target player.
+     * @param value    the original value, discarded.
+     * @param sneaking the player's sneaking state.
+     */
+    @Redirect(
+        method = "updatePlayerAbilityStatus",
+        require = 1,
+        at = @At(
+            value = "FIELD",
+            target = "Lnet/minecraft/entity/player/EntityPlayer;stepHeight:F",
+            ordinal = 0,
+            opcode = Opcodes.PUTFIELD))
+    protected void modifyStepHeight(EntityPlayer instance, float value, @Local(ordinal = 6) boolean sneaking) {
+        ItemStack boots = instance.getCurrentArmor(0);
+        instance.stepHeight = (float) (ItemConfigFields.getOrDefault(boots, "StepHeight", 1.01D))
+            * (sneaking ? 0.5F : 1F);
+        System.out.println(instance.stepHeight);
     }
 
     /**
@@ -72,6 +146,13 @@ public class MixinItemArmorInfinityAbilityHandler {
         return false;
     }
 
+    /**
+     * Allows changing the jump height, maxes out at 4 blocks.
+     *
+     * @param event  the jump event.
+     * @param ci     called to cancel the injected method.
+     * @param player the jumping player.
+     */
     @Inject(
         method = "jumpBoost",
         at = @At(

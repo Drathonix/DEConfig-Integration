@@ -49,4 +49,14 @@ public class ItemConfigFields {
         }
         return false;
     }
+
+    public static double getOrDefault(ItemStack stack, String key, double v) {
+        if (stack != null && stack.hasTagCompound()
+            && stack.getTagCompound()
+                .hasKey(key)) {
+            return stack.getTagCompound()
+                .getDouble(key);
+        }
+        return v;
+    }
 }
