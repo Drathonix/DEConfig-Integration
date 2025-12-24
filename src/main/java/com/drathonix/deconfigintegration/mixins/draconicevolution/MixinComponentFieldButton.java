@@ -14,7 +14,7 @@ import com.brandon3055.draconicevolution.client.gui.guicomponents.ComponentField
 import com.brandon3055.draconicevolution.common.lib.References;
 import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
 import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
-import com.drathonix.deconfigintegration.bridge.AdvancedItemConfigField;
+import com.drathonix.deconfigintegration.bridge.EnumerableItemConfigField;
 
 @Mixin(value = ComponentFieldButton.class)
 public class MixinComponentFieldButton {
@@ -33,7 +33,7 @@ public class MixinComponentFieldButton {
             shift = At.Shift.AFTER),
         cancellable = true)
     public void deci$supportAdvancedFields(int x, int y, int button, CallbackInfo ci) {
-        if (field instanceof AdvancedItemConfigField aicf) {
+        if (field instanceof EnumerableItemConfigField aicf) {
             if (aicf.representativeType == References.BOOLEAN_ID && aicf.datatype != References.BOOLEAN_ID) {
                 aicf.value = !aicf.castToBoolean();
                 aicf.value = aicf.castBooleanToInt();
@@ -47,7 +47,7 @@ public class MixinComponentFieldButton {
                         field.name);
                 }
                 ci.cancel();
-            } else if (aicf.representativeType == AdvancedItemConfigField.ENUM_REPR_ID) {
+            } else if (aicf.representativeType == EnumerableItemConfigField.ENUM_REPR_ID) {
                 aicf.value = aicf.nextEnumValue();
                 aicf.sendChanges();
                 ItemStack stack = gui.player.inventory.getStackInSlot(field.slot);

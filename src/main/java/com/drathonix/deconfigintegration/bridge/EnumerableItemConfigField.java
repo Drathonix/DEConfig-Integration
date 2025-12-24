@@ -5,7 +5,7 @@ import net.minecraft.util.StringUtils;
 
 import com.brandon3055.draconicevolution.common.lib.References;
 
-public class AdvancedItemConfigField extends TranslatableItemConfigField {
+public class EnumerableItemConfigField extends TranslatableItemConfigField {
 
     public static final int ENUM_REPR_ID = -1;
 
@@ -14,22 +14,22 @@ public class AdvancedItemConfigField extends TranslatableItemConfigField {
     public int representativeType;
     private String[] enumTranslationKeys;
 
-    public AdvancedItemConfigField(int datatype, int slot, String nbtName, String translationKey) {
+    public EnumerableItemConfigField(int datatype, int slot, String nbtName, String translationKey) {
         super(datatype, slot, nbtName, translationKey);
         this.representativeType = datatype;
     }
 
-    public AdvancedItemConfigField representAs(int representativeType) {
+    public EnumerableItemConfigField representAs(int representativeType) {
         this.representativeType = representativeType;
         return this;
     }
 
-    public AdvancedItemConfigField representAsEnum(String[] translationKeys) {
+    public EnumerableItemConfigField representAsEnum(String[] translationKeys) {
         return representAsEnum(translationKeys, asDatatype(0), asDatatype(translationKeys.length - 1), asDatatype(1));
     }
 
-    public AdvancedItemConfigField representAsEnum(String[] translationKeys, Object trueMin, Object trueMax,
-        Object increment) {
+    public EnumerableItemConfigField representAsEnum(String[] translationKeys, Object trueMin, Object trueMax,
+                                                     Object increment) {
         this.enumTranslationKeys = translationKeys;
         setMinMaxAndIncromente(trueMin, trueMax, 1);
         return representAs(-1);

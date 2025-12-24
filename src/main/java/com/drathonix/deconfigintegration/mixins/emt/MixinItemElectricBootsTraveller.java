@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import com.brandon3055.brandonscore.common.lib.References;
 import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
 import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
-import com.drathonix.deconfigintegration.bridge.AdvancedItemConfigField;
+import com.drathonix.deconfigintegration.bridge.EnumerableItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
 
 import emt.item.armor.boots.ItemElectricBootsTraveller;
@@ -22,11 +22,11 @@ public class MixinItemElectricBootsTraveller implements DEConfigurableExt, IConf
     public List<ItemConfigField> getFields(ItemStack stack, int slot) {
         List<ItemConfigField> fields = new ArrayList<>();
         fields.add(
-            new AdvancedItemConfigField(References.DOUBLE_ID, slot, "speed", "boots.speedPercentage")
+            new EnumerableItemConfigField(References.DOUBLE_ID, slot, "speed", "boots.speedPercentage")
                 .setMinMaxAndIncromente(0D, 1D, 0.05D)
                 .readFromItem(stack, 0.5D));
         fields.add(
-            new AdvancedItemConfigField(References.DOUBLE_ID, slot, "jump", "boots.jumpPercentage")
+            new EnumerableItemConfigField(References.DOUBLE_ID, slot, "jump", "boots.jumpPercentage")
                 .setMinMaxAndIncromente(0D, 1D, 0.05D)
                 .readFromItem(stack, 0.5D));
         return fields;

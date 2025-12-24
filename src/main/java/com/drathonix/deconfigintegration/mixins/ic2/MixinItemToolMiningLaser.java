@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import com.brandon3055.brandonscore.common.lib.References;
 import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
 import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
-import com.drathonix.deconfigintegration.bridge.AdvancedItemConfigField;
+import com.drathonix.deconfigintegration.bridge.EnumerableItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
 
 import ic2.core.item.tool.ItemToolMiningLaser;
@@ -22,7 +22,7 @@ public class MixinItemToolMiningLaser implements DEConfigurableExt, IConfigurabl
     public List<ItemConfigField> getFields(ItemStack stack, int slot) {
         List<ItemConfigField> fields = new ArrayList<>();
         fields.add(
-            new AdvancedItemConfigField(References.INT_ID, slot, "laserSetting", "ic2.laserSetting")
+            new EnumerableItemConfigField(References.INT_ID, slot, "laserSetting", "ic2.laserSetting")
                 .representAsEnum(
                     new String[] { "ic2.mode.mining", "ic2.mode.lowFocus", "ic2.mode.longRange", "ic2.mode.horizontal",
                         "ic2.mode.superHeat", "ic2.mode.scatter" })

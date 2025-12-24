@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import com.brandon3055.brandonscore.common.lib.References;
 import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
 import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
-import com.drathonix.deconfigintegration.bridge.AdvancedItemConfigField;
+import com.drathonix.deconfigintegration.bridge.EnumerableItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
 
 import gravisuite.ItemAdvancedLappack;
@@ -23,7 +23,7 @@ public class MixinItemAdvancedLappack implements DEConfigurableExt, IConfigurabl
 
         List<ItemConfigField> fields = new ArrayList<>();
         fields.add(
-            new AdvancedItemConfigField(References.INT_ID, slot, "toolMode", "gravisuite.Charging")
+            new EnumerableItemConfigField(References.INT_ID, slot, "toolMode", "gravisuite.Charging")
                 .representAs(References.BOOLEAN_ID)
                 .readFromItem(stack, 1)
                 .setMinMaxAndIncromente(0, 1, 1));

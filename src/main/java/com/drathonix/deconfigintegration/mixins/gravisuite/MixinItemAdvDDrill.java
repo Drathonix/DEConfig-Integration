@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import com.brandon3055.brandonscore.common.lib.References;
 import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
 import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
-import com.drathonix.deconfigintegration.bridge.AdvancedItemConfigField;
+import com.drathonix.deconfigintegration.bridge.EnumerableItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
 
 import gravisuite.ItemAdvDDrill;
@@ -22,7 +22,7 @@ public class MixinItemAdvDDrill implements DEConfigurableExt, IConfigurableItem 
     public List<ItemConfigField> getFields(ItemStack stack, int slot) {
         List<ItemConfigField> fields = new ArrayList<>();
         fields.add(
-            new AdvancedItemConfigField(References.INT_ID, slot, "toolMode", "gravisuite.Drill")
+            new EnumerableItemConfigField(References.INT_ID, slot, "toolMode", "gravisuite.Drill")
                 .representAsEnum(
                     new String[] { "gravisuite.normalPower", "gravisuite.lowPower", "gravisuite.ultraLowPower",
                         "gravisuite.bigHolePower" })

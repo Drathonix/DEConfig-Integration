@@ -11,7 +11,7 @@ import com.brandon3055.brandonscore.common.lib.References;
 import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
 import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
 import com.drathonix.deconfigintegration.DEConfigIntegration;
-import com.drathonix.deconfigintegration.bridge.AdvancedItemConfigField;
+import com.drathonix.deconfigintegration.bridge.EnumerableItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
 
 import gravisuite.ItemAdvChainsaw;
@@ -24,7 +24,7 @@ public class MixinItemAdvChainsaw implements DEConfigurableExt, IConfigurableIte
         List<ItemConfigField> fields = new ArrayList<>();
         // So funny thing, Gravisuite has the boolean logic reversed. So I had to use the enum system.
         fields.add(
-            new AdvancedItemConfigField(
+            new EnumerableItemConfigField(
                 References.INT_ID,
                 slot,
                 "toolMode",
