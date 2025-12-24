@@ -6,5 +6,7 @@ dependencies {
     implementation("com.github.GTNewHorizons:Gravitation-Suite-Neo:1.1.5:dev")
     implementation("com.github.GTNewHorizons:Electro-Magic-Tools:1.4.6:dev")
     implementation("com.github.GTNewHorizons:ThaumicBoots:1.2.1:dev")
+    implementation("com.github.GTNewHorizons:WitchingGadgets:1.8.14-GTNH:dev")
+    implementation("com.github.GTNewHorizons:Avaritia:1.78:dev")
     implementation(deobf('https://forum.industrial-craft.net/core/attachment/4519-gravisuite-1-7-10-2-0-3-jar'))
 }
