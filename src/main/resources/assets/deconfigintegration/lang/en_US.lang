@@ -41,3 +41,6 @@ button.de.VerticalFlightSpeedMulti.name=Flight Vertical Speed Multiplier
 button.de.StepHeight.name=Step Height
 button.de.FlightSpeedBoost.name=Flight Horizontal Speed Boost
 button.de.HorizontalSpeedBoost.name=Horizontal Speed Boost
+
+deci.dumbmode=Dumb Mode
+deci.none=None

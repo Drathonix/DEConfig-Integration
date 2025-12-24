@@ -17,6 +17,12 @@ import com.drathonix.deconfigintegration.integration.ItemConfigFields;
 
 import fox.spiteful.avaritia.items.ItemArmorInfinity;
 
+/**
+ * Adds DECI support for infinity armor.
+ * 
+ * @since 1.0.2
+ * @author Jack Andersen
+ */
 @Mixin(ItemArmorInfinity.class)
 public class MixinItemArmorInfinity implements DEConfigurableExt, IConfigurableItem {
 

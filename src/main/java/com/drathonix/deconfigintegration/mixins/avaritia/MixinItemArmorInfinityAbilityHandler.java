@@ -22,6 +22,12 @@ import com.llamalad7.mixinextras.sugar.Local;
 
 import fox.spiteful.avaritia.items.ItemArmorInfinity;
 
+/**
+ * Modifies infinity armor behavior.
+ * 
+ * @author Jack Andersen
+ * @since 1.0.2
+ */
 @Mixin(value = ItemArmorInfinity.abilityHandler.class)
 public class MixinItemArmorInfinityAbilityHandler {
 

@@ -64,6 +64,10 @@ public class DECIMixins implements ILateMixinLoader {
                         mixins.add("avaritia.MixinItemArmorInfinityThaumcraft");
                     }
                 }
+
+                if (loadedMods.contains("WitchingGadgets")) {
+                    mixins.add("witchinggadgets.MixinItemPrimordialArmor");
+                }
             } else {
                 DEConfigIntegration.LOG.log(Level.WARN, "Draconic evolution is not present. DECI has been disabled.");
             }

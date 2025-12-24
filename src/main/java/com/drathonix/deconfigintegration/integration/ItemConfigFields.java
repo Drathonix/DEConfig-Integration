@@ -59,4 +59,24 @@ public class ItemConfigFields {
         }
         return v;
     }
+
+    public static int getOrDefault(ItemStack stack, String key, int v) {
+        if (stack != null && stack.hasTagCompound()
+            && stack.getTagCompound()
+                .hasKey(key)) {
+            return stack.getTagCompound()
+                .getInteger(key);
+        }
+        return v;
+    }
+
+    public static boolean getOrDefault(ItemStack stack, String key, boolean v) {
+        if (stack != null && stack.hasTagCompound()
+            && stack.getTagCompound()
+                .hasKey(key)) {
+            return stack.getTagCompound()
+                .getBoolean(key);
+        }
+        return v;
+    }
 }
