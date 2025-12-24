@@ -7,6 +7,7 @@ import com.brandon3055.draconicevolution.common.lib.References;
 
 /**
  * A config field whose value is one of an enumerable set of values rather than a bounded number.
+ * 
  * @author Jack Andersen
  * @since 1.0.2
  */
@@ -34,7 +35,7 @@ public class EnumerableItemConfigField extends TranslatableItemConfigField {
     }
 
     public EnumerableItemConfigField representAsEnum(String[] translationKeys, Object trueMin, Object trueMax,
-                                                     Object increment) {
+        Object increment) {
         this.enumTranslationKeys = translationKeys;
         setMinMaxAndIncromente(trueMin, trueMax, 1);
         return representAs(-1);

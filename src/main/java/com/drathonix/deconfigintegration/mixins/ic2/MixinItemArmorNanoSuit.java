@@ -13,8 +13,8 @@ import org.spongepowered.asm.mixin.Unique;
 import com.brandon3055.brandonscore.common.lib.References;
 import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
 import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
-import com.drathonix.deconfigintegration.bridge.EnumerableItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
+import com.drathonix.deconfigintegration.bridge.EnumerableItemConfigField;
 
 import ic2.core.item.armor.ItemArmorNanoSuit;
 

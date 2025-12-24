@@ -16,6 +16,12 @@ import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
 import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
 import com.drathonix.deconfigintegration.bridge.EnumerableItemConfigField;
 
+/**
+ * This mixin adds support for enumerable config fields in the Draconic Evolution Item Configuration GUI.
+ * 
+ * @since 1.0.0
+ * @author Jack Andersen
+ */
 @Mixin(value = ComponentFieldButton.class)
 public class MixinComponentFieldButton {
 

@@ -23,7 +23,6 @@ public class DECIMixins implements ILateMixinLoader {
     public List<String> getMixins(Set<String> loadedMods) {
         try {
             List<String> mixins = new ArrayList<>();
-            System.out.println("Detected mods: " + loadedMods);
             if (loadedMods.contains("DraconicEvolution")) {
                 mixins.add("draconicevolution.MixinProfileHelper");
                 if (FMLCommonHandler.instance()
@@ -50,16 +49,21 @@ public class DECIMixins implements ILateMixinLoader {
                 if (loadedMods.contains("thaumicboots")) {
                     mixins.add("thaumicboots.MixinItemBoots");
                 }
+
                 if (loadedMods.contains("EMT")) {
                     mixins.add("emt.MixinItemElectricBootsTraveller");
                     mixins.add("emt.MixinItemElectricGoggles");
                     mixins.add("emt.MixinItemNanoGoggles");
                     mixins.add("emt.MixinItemQuantumGoggles");
                 }
+
+                if (loadedMods.contains("Avaritia")) {
+                    mixins.add("avaritia.MixinItemArmorInfinity");
+                    mixins.add("avaritia.MixinItemArmorInfinityAbilityHandler");
+                }
             } else {
                 DEConfigIntegration.LOG.log(Level.WARN, "Draconic evolution is not present. DECI has been disabled.");
             }
-            System.out.println("Loading: " + mixins);
             return mixins;
         } catch (Exception e) {
             e.printStackTrace();
