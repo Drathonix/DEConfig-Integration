@@ -14,14 +14,17 @@ Thaumic Boots: All boots speed, jump, and omni modulation values are supported.
 
 EMT: All boots speed and jump boost configurable.
 
+Avaritia: All infinity armor movement stats are controllable as well as thaumcraft node vision.
+
 ### Other changes
 IC2: Added an NBT tag to Quantum Leggings to toggle quantum sprint without changing the config. Can only be edited in the drac gui.
 EMT: Added an NBT tag to Electric Goggles to disable Magic Vision
+Avaritia: Added Night Vision to the helmet.
 
 ### How to integrate with DECI
 DECI contains only two classes of its own that you need to be aware of:
 
-[AdvancedItemConfigField](https://github.com/Drathonix/DEConfig-Integration/blob/main/src/main/java/com/drathonix/deconfigintegration/bridge/AdvancedItemConfigField.java)
+[EnumerableItemConfigField](https://github.com/Drathonix/DEConfig-Integration/blob/main/src/main/java/com/drathonix/deconfigintegration/bridge/EnumerableItemConfigField.java)
 * Supports adding fields that draconic evolution cannot handle normally, specifically 'integer booleans' and integer enums
 * Can support representing a datatype as another.
 * For good examples of this, see the [GraviSuite Mixins](https://github.com/Drathonix/DEConfig-Integration/tree/main/src/main/java/com/drathonix/deconfigintegration/mixins/gravisuite)
@@ -32,3 +35,6 @@ DECI contains only two classes of its own that you need to be aware of:
 * To apply this to other mods, use mixins.
 
 Absolutely feel free to contribute. No one is against better QOL.
+
+### Future Plans
+Ultimately the GTNH Dev team would prefer if something like this did not use mixins and although I doubt my mixins will break in the future its obvious that the real issue is with how mods implement gear configuration. Draconic evolution makes configuring its gear very easy in comparison to others, and I figured why reinvent the wheel. Well I'm going to reinvent the wheel next time. GTNH needs a universal API that allows configuring armor to be simple and easy without needing 100 different keybinds, this endeavor will require a giant number of changes to be made to the mods I've mixin'd here as well as a well defined API for devs to hook into. I'll keep maintaining DECI but be aware that DECI may be deprecated in the future.
