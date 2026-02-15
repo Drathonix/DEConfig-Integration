@@ -3,13 +3,15 @@ package com.drathonix.deconfigintegration.mixins.emt;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.drathonix.deconfigintegration.DEConfigIntegration;
+import com.drathonix.deconfigintegration.bridge.TranslatableItemConfigField;
 import net.minecraft.item.ItemStack;
 
 import org.spongepowered.asm.mixin.Mixin;
 
 import com.brandon3055.brandonscore.common.lib.References;
-import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
-import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
+import com.brandon3055.draconicevolution.common.utils.IConfigurableItem;
+import com.brandon3055.draconicevolution.common.utils.ItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
 import com.drathonix.deconfigintegration.bridge.EnumerableItemConfigField;
 
@@ -29,6 +31,11 @@ public class MixinItemElectricBootsTraveller implements DEConfigurableExt, IConf
             new EnumerableItemConfigField(References.DOUBLE_ID, slot, "jump", "boots.jumpPercentage")
                 .setMinMaxAndIncromente(0D, 1D, 0.05D)
                 .readFromItem(stack, 0.5D));
+        if(DEConfigIntegration.thaumicboots) {
+            fields.add(
+                new TranslatableItemConfigField(References.BOOLEAN_ID, slot, "omni", "boots.omni")
+                    .readFromItem(stack, true));
+        }
         return fields;
     }
 

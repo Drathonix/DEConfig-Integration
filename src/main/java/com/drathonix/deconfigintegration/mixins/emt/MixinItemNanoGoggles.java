@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 
 import org.spongepowered.asm.mixin.Mixin;
 
-import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
+import com.brandon3055.draconicevolution.common.utils.ItemConfigField;
 import com.drathonix.deconfigintegration.integration.ItemConfigFields;
 
 import emt.item.armor.goggles.ItemNanoGoggles;
