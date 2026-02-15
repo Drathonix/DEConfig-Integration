@@ -8,7 +8,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 public class CommonProxy {
 
     // preInit "Run before anything else. Read your config, create blocks, items, etc, and register them with the
-    // GameRegistry." (Remove if not needed)
+    // GameRegistry." (Remove if not needed) a
     public void preInit(FMLPreInitializationEvent event) {
 
     }
