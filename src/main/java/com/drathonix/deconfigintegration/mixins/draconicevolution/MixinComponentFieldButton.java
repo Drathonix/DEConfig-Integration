@@ -12,13 +12,13 @@ import com.brandon3055.brandonscore.common.utills.DataUtills;
 import com.brandon3055.draconicevolution.client.gui.componentguis.GUIToolConfig;
 import com.brandon3055.draconicevolution.client.gui.guicomponents.ComponentFieldButton;
 import com.brandon3055.draconicevolution.common.lib.References;
-import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
-import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
+import com.brandon3055.draconicevolution.common.utils.IConfigurableItem;
+import com.brandon3055.draconicevolution.common.utils.ItemConfigField;
 import com.drathonix.deconfigintegration.bridge.EnumerableItemConfigField;
 
 /**
  * This mixin adds support for enumerable config fields in the Draconic Evolution Item Configuration GUI.
- * 
+ *
  * @since 1.0.0
  * @author Jack Andersen
  */

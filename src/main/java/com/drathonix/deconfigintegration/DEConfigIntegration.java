@@ -20,6 +20,7 @@ public class DEConfigIntegration {
     public static final Logger LOG = LogManager.getLogger(MODID);
     public static final boolean gravisuiteneo = Loader.isModLoaded("gravisuiteneo");
     public static final boolean thaumcraft = Loader.isModLoaded("Thaumcraft");
+    public static final boolean thaumicBoots = Loader.isModLoaded("thaumicboots");
 
     @SidedProxy(
         clientSide = "com.drathonix.deconfigintegration.proxy.ClientProxy",

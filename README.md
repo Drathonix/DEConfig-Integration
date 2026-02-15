@@ -12,7 +12,7 @@ Gravi Suite Neo: Chainsaw Treecapitator is supported.
 
 Thaumic Boots: All boots speed, jump, and omni modulation values are supported.
 
-EMT: All boots speed and jump boost configurable.
+EMT: All boots speed and jump boost configurable. omni modulation possible with thaumic boots installed.
 
 Avaritia: All infinity armor movement stats are controllable as well as thaumcraft node vision.
 

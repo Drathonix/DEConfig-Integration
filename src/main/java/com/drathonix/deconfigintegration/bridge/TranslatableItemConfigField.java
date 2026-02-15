@@ -2,7 +2,7 @@ package com.drathonix.deconfigintegration.bridge;
 
 import net.minecraft.util.StatCollector;
 
-import com.brandon3055.draconicevolution.common.utills.ItemConfigField;
+import com.brandon3055.draconicevolution.common.utils.ItemConfigField;
 
 /**
  * Generic translatable item config field which reads the field's name from the translation table using the key
