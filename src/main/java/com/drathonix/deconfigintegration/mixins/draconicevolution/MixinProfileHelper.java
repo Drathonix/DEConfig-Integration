@@ -8,13 +8,13 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
+import com.brandon3055.draconicevolution.common.utils.IConfigurableItem;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
 
 /**
  * This mixin returns the item's configurable tag instead of the profile tag if the item implements
  * {@link DEConfigurableExt}
- * 
+ *
  * @author Jack Andersen
  * @since 1.0.0
  */
