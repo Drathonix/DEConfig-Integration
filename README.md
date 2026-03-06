@@ -18,7 +18,9 @@ Avaritia: All infinity armor movement stats are controllable as well as thaumcra
 
 ### Other changes
 IC2: Added an NBT tag to Quantum Leggings to toggle quantum sprint without changing the config. Can only be edited in the drac gui.
+
 EMT: Added an NBT tag to Electric Goggles to disable Magic Vision
+
 Avaritia: Added Night Vision to the helmet.
 
 ### How to integrate with DECI
