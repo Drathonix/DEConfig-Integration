@@ -4,7 +4,7 @@ dependencies {
         exclude group:"com.github.GTNewHorizons", module: "Baubles"
     }
     implementation('curse.maven:cofh-lib-220333:2388748')
-    implementation("com.github.GTNewHorizons:Draconic-Evolution:1.5.18-GTNH:dev"){
+    implementation("com.github.GTNewHorizons:Draconic-Evolution:1.5.19-GTNH:dev"){
         exclude group:"com.github.GTNewHorizons", module: "Baubles"
     }
     implementation("com.github.GTNewHorizons:BrandonsCore:1.2.1-GTNH:dev"){
