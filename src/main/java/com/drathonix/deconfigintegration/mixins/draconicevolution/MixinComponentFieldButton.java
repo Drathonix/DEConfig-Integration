@@ -8,10 +8,10 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import com.brandon3055.brandonscore.common.utills.DataUtills;
 import com.brandon3055.draconicevolution.client.gui.componentguis.GUIToolConfig;
 import com.brandon3055.draconicevolution.client.gui.guicomponents.ComponentFieldButton;
 import com.brandon3055.draconicevolution.common.lib.References;
+import com.brandon3055.draconicevolution.common.utils.DataUtils;
 import com.brandon3055.draconicevolution.common.utils.IConfigurableItem;
 import com.brandon3055.draconicevolution.common.utils.ItemConfigField;
 import com.drathonix.deconfigintegration.bridge.EnumerableItemConfigField;
@@ -46,7 +46,7 @@ public class MixinComponentFieldButton {
                 aicf.sendChanges();
                 ItemStack stack = gui.player.inventory.getStackInSlot(field.slot);
                 if (stack != null && stack.getItem() instanceof IConfigurableItem) {
-                    DataUtills.writeObjectToCompound(
+                    DataUtils.writeObjectToCompound(
                         IConfigurableItem.ProfileHelper.getProfileCompound(stack),
                         field.value,
                         field.datatype,
@@ -58,7 +58,7 @@ public class MixinComponentFieldButton {
                 aicf.sendChanges();
                 ItemStack stack = gui.player.inventory.getStackInSlot(field.slot);
                 if (stack != null && stack.getItem() instanceof IConfigurableItem) {
-                    DataUtills.writeObjectToCompound(
+                    DataUtils.writeObjectToCompound(
                         IConfigurableItem.ProfileHelper.getProfileCompound(stack),
                         field.value,
                         field.datatype,

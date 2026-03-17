@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArgs;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
-import com.brandon3055.brandonscore.common.lib.References;
+import com.brandon3055.draconicevolution.common.lib.References;
 import com.brandon3055.draconicevolution.common.utils.IConfigurableItem;
 import com.brandon3055.draconicevolution.common.utils.ItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
