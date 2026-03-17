@@ -4,7 +4,7 @@ import java.util.List;
 
 import net.minecraft.item.ItemStack;
 
-import com.brandon3055.brandonscore.common.lib.References;
+import com.brandon3055.draconicevolution.common.lib.References;
 import com.brandon3055.draconicevolution.common.utils.ItemConfigField;
 import com.drathonix.deconfigintegration.DEConfigIntegration;
 import com.drathonix.deconfigintegration.bridge.TranslatableItemConfigField;

@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
-import com.brandon3055.brandonscore.common.lib.References;
+import com.brandon3055.draconicevolution.common.lib.References;
 import com.brandon3055.draconicevolution.common.utils.IConfigurableItem;
 import com.brandon3055.draconicevolution.common.utils.ItemConfigField;
 import com.drathonix.deconfigintegration.bridge.DEConfigurableExt;
